@@ -20,6 +20,7 @@ const promptUser = [
     }
 ];
 
+// Initialize application
 function employeeDatabase() {
     inquirer.prompt(promptUser).then((answers) => {
         switch (answers.prompt) {
@@ -48,16 +49,25 @@ function employeeDatabase() {
     })
 };
 
+// Functions for specific actions based on user input in employeeDatabase()
 function viewAllDepartments() {
-
-    // restart application
-    employeeDatabase();
+    db.query("SELECT * FROM departments", (err, result) => {
+        if (err) throw err;
+        console.log("Viewing all Departments:");
+        console.table(result);
+        // restart application
+        employeeDatabase();
+    })
 };
 
 function viewAllRoles() {
-
-    // restart application
-    employeeDatabase();
+    db.query("SELECT * FROM roles", (err, result) => {
+        if (err) throw err;
+        console.log("Viewing all Roles:");
+        console.table(result);
+        // restart application
+        employeeDatabase();
+    })
 };
 
 function viewAllEmployees() {
