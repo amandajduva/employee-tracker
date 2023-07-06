@@ -71,9 +71,13 @@ function viewAllRoles() {
 };
 
 function viewAllEmployees() {
-
-    // restart application
-    employeeDatabase();
+    db.query("SELECT * FROM employees", (err, result) => {
+        if (err) throw err;
+        console.log("Viewing all Employees:");
+        console.table(result);
+        // restart application
+        employeeDatabase();
+    })
 };
 
 function addDepartment() {
