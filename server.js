@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 const mysql = require('mysql2');
 
-const questions = [
+const promptUser = [
     {
         type: 'list',
         name: 'prompt',
@@ -11,7 +11,7 @@ const questions = [
 ];
 
 function employeeDatabase() {
-    inquirer.prompt(questions).then((answers) => {
+    inquirer.prompt(promptUser).then((answers) => {
 
     })
 };
