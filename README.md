@@ -9,7 +9,7 @@ Please utilize the command line on your machine to use this generator. This gene
 
 ## Credits
 
-While I wrote the code for this application, I also received support from a tutor.
+While I wrote the code for this application, I also received support from a tutor. My tutor assisted me in fixing bugs with code I already had and with finishing code for the add role, add employee, and update employee functions. 
 
 ## License
 
