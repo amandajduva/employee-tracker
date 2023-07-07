@@ -11,7 +11,7 @@ VALUES ("Sales Representative", 50000, 1),
     ("Customer Service Representative", 45000, 4);
 
 INSERT INTO employees (first_name, last_name, role_id, manager_id)
-VALUES ("Violet", "Sorrengail", 1, 1),
+VALUES ("Violet", "Sorrengail", 1, null),
     ("Xaden", "Riorson", 2, 2),
-    ("Rhiannon", "Matthias", 3, 3),
-    ("Liam", "Mairi", 4, 4);
+    ("Rhiannon", "Matthias", 3, 1),
+    ("Liam", "Mairi", 4, 2);
